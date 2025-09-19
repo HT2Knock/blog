@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>T2Knock Dev Blog</title>
   </head>
   <body>
-    <h1>Hello World! Starting a new astro blog</h1>
+    <header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
 
