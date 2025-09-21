@@ -10,6 +10,9 @@ const identity = {
 };
 
 const skills = ["js", "bash", "linux", "system design", "go"];
+const hlColor = "#7aa2f7";
+const hlWeight = "600";
+const hlText = "capitalize";
 
 const happy = true;
 const finished = false;
@@ -45,11 +48,11 @@ const goal = 3;
     </p>
 
     <ul>
-      {identity.hobbies.map((hobbie) => <li>{hobbie}</li>)}
+      {identity.hobbies.map((hobbie) => <li class="highlight">{hobbie}</li>)}
     </ul>
     <p>The skills that I own:</p>
     <ul>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {skills.map((skill) => <li class="highlight">{skill}</li>)}
     </ul>
 
     {happy && <p>I am happy to be learning Astro!</p>}
@@ -65,3 +68,22 @@ const goal = 3;
     }
   </div>
 </Layout>
+
+<style
+  define:vars={{
+    skillColor: hlColor,
+    skillWeight: hlWeight,
+    skillText: hlText,
+  }}
+>
+  h1 {
+    color: #bb9af7;
+    font-size: 4rem;
+  }
+
+  .highlight {
+    color: var(--skillColor);
+    font-weight: var(--skillWeight);
+    text-transform: var(--skillText);
+  }
+</style>
