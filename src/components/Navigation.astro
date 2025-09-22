@@ -1,5 +1,50 @@
-<nav>
+<nav class="nav-links">
   <a href="/">Home</a>
   <a href="/about">About</a>
   <a href="/blog">Blog</a>
 </nav>
+
+<style>
+  .nav-links {
+    width: 100%;
+    top: 5rem;
+    left: 48px;
+    background-color: #ff9776;
+    display: none;
+  }
+
+  .nav-links a {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus {
+    margin: 0;
+    border-bottom-color: #7dcfff;
+    color: #7aa2f7;
+  }
+
+  .expanded {
+    display: unset;
+  }
+
+  @media screen and (min-width: 636px) {
+    .nav-links {
+      margin-left: 5em;
+      display: block;
+      position: static;
+      width: auto;
+      background: none;
+    }
+
+    .nav-links a {
+      display: inline-block;
+      padding: 15px 20px;
+    }
+  }
+</style>
