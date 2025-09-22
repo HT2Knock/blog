@@ -9,24 +9,27 @@
     width: 100%;
     top: 5rem;
     left: 48px;
-    background-color: #ff9776;
     display: none;
+    margin: 0;
   }
 
   .nav-links a {
     display: block;
     text-align: center;
     font-size: 1.2rem;
+    padding: 10px 0;
     font-weight: bold;
     text-transform: uppercase;
-    border-bottom: 2px solid transparent;
+    border: 1px solid transparent;
+    border-radius: 12px;
   }
 
   .nav-links a:hover,
   .nav-links a:focus {
     margin: 0;
-    border-bottom-color: #7dcfff;
-    color: #7aa2f7;
+    border: 1px solid transparent;
+    background-color: #7aa2f7;
+    color: #c0caf5;
   }
 
   .expanded {
@@ -45,6 +48,16 @@
     .nav-links a {
       display: inline-block;
       padding: 15px 20px;
+      border-bottom: 2px solid transparent;
+      border-radius: 0;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      background: none;
+      margin: 0;
+      border-bottom-color: #7dcfff;
+      color: #7aa2f7;
     }
   }
 </style>
