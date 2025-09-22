@@ -1,0 +1,24 @@
+---
+const { frontmatter } = Astro.props;
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main>
+    <h1>{frontmatter.title}</h1>
+    <p>
+      Written by <span class="author">{frontmatter.author}</span> - <span
+        >{frontmatter.pubDate?.toString().slice(0, 10)}</span
+      >
+    </p>
+    <slot />
+  </main>
+</Layout>
+
+<style>
+  .author {
+    color: #9ece6a;
+    text-decoration: underline;
+  }
+</style>
