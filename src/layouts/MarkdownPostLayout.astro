@@ -9,7 +9,7 @@ import Layout from "../layouts/Layout.astro";
     <h1>{frontmatter.title}</h1>
     <p>
       Written by <span class="author">{frontmatter.author}</span> - <span
-        >{frontmatter.pubDate?.toString().slice(0, 10)}</span
+        >{frontmatter.pubDate.toString().slice(0, 10)}</span
       >
     </p>
     <slot />
