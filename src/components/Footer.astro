@@ -1,0 +1,33 @@
+---
+const link = "https://github.com/T2Knock/blog";
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="footer">
+  <p>
+    Learn more about what I do on <a href={link}>
+      <Icon name="mdi:github" /> Github</a
+    >
+  </p>
+</footer>
+
+<style>
+  .footer p {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .footer a {
+    display: inline-flex;
+    gap: 0.2rem;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .footer a svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+  }
+</style>
