@@ -3,6 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: Why does ricing linux even matter ?
 author: Justin Huynh
 pubDate: 2025-09-22-T2
+tags: ["ricing"]
 ---
 
 Ricing is the art of making your linux desktop beautiful emphasize the
