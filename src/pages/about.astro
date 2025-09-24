@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+const title = "About me";
+
+const identity = {
+  name: "t2knock",
+  country: "online",
+  occupation: "wanna be businessman",
+  hobbies: ["software", "running", "coffee", "tech", "indoor plant"],
+};
+
+const skills = ["js", "bash", "linux", "system design", "go"];
+const hlColor = "#7aa2f7";
+const hlWeight = "600";
+const hlText = "capitalize";
+
+const happy = true;
+const finished = false;
+const goal = 3;
+---
+
+<Layout pageTitle={title}>
+  <div>
+    <h1>{title}</h1>
+    <h2>...and the new Astro site!</h2>
+
+    <p>
+      Pretty much just walking through the astro guide right now 😅, well
+      problem i think the docs is pretty old so it's wasn't using layout
+    </p>
+    <p>
+      Take the little step again because why not am I right? Always the beginner
+      or the develper world will humble you quick.
+    </p>
+
+    <ul>
+      <li>My name is {identity.name}</li>
+      <li>
+        I live in {identity.country} and current working as a {
+          identity.occupation
+        }.
+      </li>
+    </ul>
+    <p>
+      What I like to do on a daily basis you ask ? Exactly {
+        identity.hobbies.length
+      } hobbies like a nerd should have 🤓
+    </p>
+
+    <ul>
+      {identity.hobbies.map((hobbie) => <li class="highlight">{hobbie}</li>)}
+    </ul>
+    <p>The skills that I own:</p>
+    <ul>
+      {skills.map((skill) => <li class="highlight">{skill}</li>)}
+    </ul>
+
+    {happy && <p>I am happy to be learning Astro!</p>}
+
+    {finished && <p>I finished this tutorial!</p>}
+
+    {
+      goal === 3 ? (
+        <p>My goal is to finish in 3 days.</p>
+      ) : (
+        <p>My goal is not 3 days.</p>
+      )
+    }
+  </div>
+</Layout>
+
+<style
+  define:vars={{
+    skillColor: hlColor,
+    skillWeight: hlWeight,
+    skillText: hlText,
+  }}
+>
+  .highlight {
+    color: var(--skillColor);
+    font-weight: var(--skillWeight);
+    text-transform: var(--skillText);
+  }
+</style>

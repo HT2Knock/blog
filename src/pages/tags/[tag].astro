@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/Layout.astro";
+import type {
+  GetStaticPaths,
+  InferGetStaticParamsType,
+  InferGetStaticPropsType,
+} from "astro";
+
+export const getStaticPaths = (async () => {
+  const allPosts: any = Object.values(
+    import.meta.glob("../posts/*.md", { eager: true }),
+  );
+
+  const tagMap = new Map<string, any[]>();
+  for (const post of allPosts) {
+    (post.frontmatter.tags || []).forEach((tag: any) => {
+      if (!tagMap.has(tag)) tagMap.set(tag, []);
+
+      tagMap.get(tag)?.push(post);
+    });
+  }
+
+  return [...tagMap.entries()].map(([tag, posts]) => ({
+    params: { tag },
+    props: { posts },
+  }));
+}) satisfies GetStaticPaths;
+
+type Params = InferGetStaticParamsType<typeof getStaticPaths>;
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { tag } = Astro.params as Params;
+const { posts } = Astro.props as Props;
+---
+
+<BaseLayout pageTitle={`Posts tagged "${tag}"`}>
+  <h2>Posts tagged with {tag}</h2>
+  <ul>
+    {
+      posts.map((post: any) => (
+        <li>
+          <a href={post.url}>{post.frontmatter.title} </a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

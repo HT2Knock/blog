@@ -9,10 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.13.6"
+    "@astrojs/rss": "^4.0.12",
+    "astro": "^5.13.6",
+    "astro-icon": "^1.1.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.35.0",
+    "@iconify-json/fa6-brands": "^1.2.6",
+    "@iconify-json/mdi": "^1.2.3",
     "eslint": "^9.35.0",
     "globals": "^16.4.0",
     "jiti": "^2.5.1",

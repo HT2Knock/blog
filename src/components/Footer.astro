@@ -1,0 +1,27 @@
+---
+const link = "https://github.com/T2Knock/blog";
+import Social from "./Social.astro";
+---
+
+<footer class="footer">
+  <p>Learn more about what I do day to day. Check out 👇</p>
+  <div class="social">
+    <Social link="https://github.com/T2Knock/blog" iconName="mdi:github" />
+    <Social
+      link="https://github.com/T2Knock/blog"
+      iconName="fa6-brands:square-x-twitter"
+    />
+    <Social
+      link="https://www.linkedin.com/in/ngoc-huynh-justin-90a5b1171/"
+      iconName="mdi:linkedin"
+    />
+  </div>
+</footer>
+
+<style>
+  .social {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+  }
+</style>
