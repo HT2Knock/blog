@@ -7,55 +7,55 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <main>
     <h1>{frontmatter.title}</h1>
+    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
     <p>
       Written by <span class="author">{frontmatter.author}</span> - <span
-        >{frontmatter.pubDate.toString().slice(0, 10)}</span
-      >
+        >{frontmatter.pubDate.toLocaleString()}
+      </span>
+
+      <div class="tags">
+        {
+          frontmatter.tags.map((tag: any) => (
+            <p class="tag">
+              <a href={`/tags/${tag}`}>{tag}</a>
+            </p>
+          ))
+        }
+      </div>
+      <slot />
     </p>
-
-    <div class="tags">
-      {
-        frontmatter.tags.map((tag: any) => (
-          <p class="tag">
-            <a href={`/tags/${tag}`}>{tag}</a>
-          </p>
-        ))
-      }
-    </div>
-
-    <slot />
   </main>
+
+  <style>
+    .author {
+      color: #9ece6a;
+      text-decoration: underline;
+    }
+
+    a {
+      color: #7aa2f7;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+    }
+
+    .tag {
+      border: 1px solid transparent;
+      border-radius: 16px;
+      padding: 0.2em 1em;
+      font-size: 0.75em;
+      background-color: #414868;
+    }
+
+    .tag:hover {
+      border-color: #7dcfff;
+    }
+
+    a:hover {
+      color: #7dcfff;
+    }
+  </style>
 </Layout>
-
-<style>
-  .author {
-    color: #9ece6a;
-    text-decoration: underline;
-  }
-
-  a {
-    color: #7aa2f7;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-  }
-
-  .tag {
-    border: 1px solid transparent;
-    border-radius: 16px;
-    padding: 0.2em 1em;
-    font-size: 0.75em;
-    background-color: #414868;
-  }
-
-  .tag:hover {
-    border-color: #7dcfff;
-  }
-
-  a:hover {
-    color: #7dcfff;
-  }
-</style>

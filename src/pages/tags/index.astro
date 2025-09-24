@@ -1,13 +1,10 @@
 ---
+import { getCollection } from "astro:content";
 import Welcome from "../../components/Welcome.astro";
 import Layout from "../../layouts/Layout.astro";
 
-const allPosts: any = Object.values(
-  import.meta.glob("../posts/*.md", { eager: true }),
-);
-const tags = [
-  ...new Set(allPosts.flatMap((post: any) => post.frontmatter.tags)),
-];
+const allPosts = await getCollection("blog");
+const tags = [...new Set(allPosts.flatMap((post: any) => post.data.tags))];
 ---
 
 <Layout pageTitle="This is the tag home page">
