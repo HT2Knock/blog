@@ -67,6 +67,15 @@ html {
   background-color: #24283b;
 }
 
+html.light {
+  background-color: #e6e7ed;
+  color: #40434f;
+}
+
+.dark .nav-links a {
+  color: #2959aa;
+}
+
 body {
   font-family: "JetBrains Mono", monospace;
   font-weight: 400;
