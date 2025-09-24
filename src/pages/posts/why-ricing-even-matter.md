@@ -1,8 +1,9 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Why does ricing linux even matter ?
+description: The yap of why ricing is matter
+layout: ../../layouts/MarkdownPostLayout.astro
 author: Justin Huynh
-pubDate: 2025-09-22-T2
+pubDate: 2025-09-22
 tags: ["ricing"]
 ---
 
