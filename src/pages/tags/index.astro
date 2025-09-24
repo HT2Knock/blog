@@ -1,0 +1,49 @@
+---
+import Welcome from "../../components/Welcome.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const allPosts: any = Object.values(
+  import.meta.glob("../posts/*.md", { eager: true }),
+);
+const tags = [
+  ...new Set(allPosts.flatMap((post: any) => post.frontmatter.tags)),
+];
+---
+
+<Layout pageTitle="This is the tag home page">
+  <h1>Hi Welcome to the tags.</h1>
+  <p>
+    Where everything we do is just tagging! Mostly tagging day to day yeah not
+    that great I know but that life hard tag. Below are all the tag!!
+  </p>
+
+  <div class="tags">
+    {
+      tags.map((tag) => (
+        <p class="tag">
+          <a href={`/tags/${tag}`}>{tag}</a>
+        </p>
+      ))
+    }
+  </div>
+</Layout>
+
+<style>
+  a {
+    color: #7aa2f7;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    margin: 0.25em;
+    border: dotted 1px #7dcfff;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 1.15em;
+    background-color: #414868;
+  }
+</style>
