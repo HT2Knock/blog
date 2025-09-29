@@ -10,6 +10,36 @@
   --color-primary: oklch(34.84% 0.152 262.74);
   --color-secondary: oklch(70.12% 0.124 272.08);
   --color-accent: oklch(72.86% 0.07 148.59);
+
+  --origin-wave: 70% 70%;
+  --animate-wave: wave 2.5s ease-in-out infinite;
+
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    15% {
+      transform: rotate(14deg);
+    }
+    30% {
+      transform: rotate(-8deg);
+    }
+    40% {
+      transform: rotate(14deg);
+    }
+    50% {
+      transform: rotate(-4deg);
+    }
+    60% {
+      transform: rotate(10deg);
+    }
+    70% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 }
 
 @layer theme {
@@ -22,5 +52,11 @@
       --color-secondary: oklch(35.12% 0.154 271.79);
       --color-accent: oklch(82% 0.105 235.72);
     }
+  }
+}
+
+@layer base {
+  body {
+    @apply leading-relaxed; /* 1.625 */
   }
 }
