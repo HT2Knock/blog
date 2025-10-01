@@ -5,11 +5,11 @@
     "Inter Variable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  --color-text: oklch(15.04% 0.009 274.27);
-  --color-background: oklch(88.78% 0.015 281.93);
-  --color-primary: oklch(34.84% 0.152 262.74);
-  --color-secondary: oklch(70.12% 0.124 272.08);
-  --color-accent: oklch(72.86% 0.07 148.59);
+  --color-text: oklch(15% 0.01 274);
+  --color-background: oklch(89% 0.015 282);
+  --color-primary: oklch(40% 0.15 263);
+  --color-secondary: oklch(65% 0.12 272);
+  --color-accent: oklch(72% 0.07 149);
 
   --origin-wave: 70% 70%;
   --animate-wave: wave 2.5s ease-in-out infinite;
@@ -47,11 +47,11 @@
   :root,
   :host {
     @variant dark {
-      --color-text: oklch(95.55% 0.005 274.96);
-      --color-background: oklch(22.63% 0.021 280.49);
-      --color-primary: oklch(71.9% 0.132 264.2);
-      --color-secondary: oklch(35.12% 0.154 271.79);
-      --color-accent: oklch(82% 0.105 235.72);
+      --color-text: oklch(95% 0.01 274);
+      --color-background: oklch(22% 0.02 280);
+      --color-primary: oklch(70% 0.14 263);
+      --color-secondary: oklch(40% 0.13 272);
+      --color-accent: oklch(65% 0.08 149);
     }
   }
 }
