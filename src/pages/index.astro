@@ -1,9 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
+import { mockPosts } from "../data/mockPosts.ts";
 ---
 
 <Layout pageTitle="Home Page">
   <Hero />
-  <section id="recent-posts" class="flex min-h-screen justify-center"></section>
+  <section class="mx-auto max-w-6xl">
+    <h1 class="mb-8 text-3xl font-bold">Blog</h1>
+
+    <div class="grid gap-10 sm:grid-cols-2">
+      {
+        mockPosts.map((post) => (
+          <article class="rounded-xl border p-6 transition hover:shadow-md">
+            <h2 class="mb-2 text-xl font-semibold">{post.title}</h2>
+            <p class="mb-3 text-sm text-gray-600">{post.excerpt}</p>
+            <div class="mb-3 text-xs text-gray-500">Published {post.date}</div>
+            <a
+              href={`/blog/${post.slug}`}
+              class="font-medium text-blue-600 hover:underline"
+            >
+              Read more →
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
 </Layout>
