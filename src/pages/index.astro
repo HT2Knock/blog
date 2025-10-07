@@ -1,30 +1,131 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
+import { Image } from "astro:assets";
+import avatar from "../assets/avatar_ai_drawn_remove.png";
 import { mockPosts } from "../data/mockPosts.ts";
 ---
 
 <Layout pageTitle="Home Page">
   <Hero />
-  <section class="mx-auto max-w-6xl">
-    <h1 class="mb-8 text-3xl font-bold">Blog</h1>
+  <section class="profiles">
+    <div class="avatar">
+      <div class="avatar-img">
+        <Image src={avatar} alt="Ngoc headshot" />
+      </div>
+      <p>David V.</p>
+    </div>
+  </section>
+  <section class="mx-auto my-[20vh] w-fit">
+    <div class="group relative aspect-square w-[200px]">
+      <!-- Avatar Image Container -->
+      <div
+        class="relative [clip-path:path('M_0_-75_L_200_0_L_200_225_C_150_200_0_375_0_200_Z')]"
+      >
+        <!-- Background blur effect -->
+        <div
+          class="blur-0 absolute inset-x-[5%] top-[60%] -bottom-[30%] -z-10 rounded-xl bg-[steelblue] bg-cover bg-center transition-[filter] duration-300 ease-in-out group-hover:blur-[20px]"
+          style="background-image: var(--bg-img, none);"
+        >
+        </div>
 
-    <div class="grid gap-10 sm:grid-cols-2">
-      {
-        mockPosts.map((post) => (
-          <article class="rounded-xl border p-6 transition hover:shadow-md">
-            <h2 class="mb-2 text-xl font-semibold">{post.title}</h2>
-            <p class="mb-3 text-sm text-gray-600">{post.excerpt}</p>
-            <div class="mb-3 text-xs text-gray-500">Published {post.date}</div>
-            <a
-              href={`/blog/${post.slug}`}
-              class="font-medium text-blue-600 hover:underline"
-            >
-              Read more →
-            </a>
-          </article>
-        ))
-      }
+        <!-- Avatar Image -->
+        <Image
+          src={avatar}
+          alt="Ngoc headshot"
+          class="h-full w-full origin-bottom scale-90 object-cover [filter:drop-shadow(5px_5px_2px_rgba(0,0,0,0.5))] transition-[scale,filter] duration-300 group-hover:scale-110 group-hover:[filter:drop-shadow(10px_15px_4px_rgba(0,0,0,0.5))]"
+        />
+      </div>
+
+      <!-- Name Text -->
+      <p
+        class="absolute right-1 -bottom-4 -z-10 -translate-y-[50px] text-[1.4rem] text-[#eee] opacity-0 transition-[translate,opacity] delay-150 duration-300 [transition-timing-function:cubic-bezier(0.47,1.64,0.41,0.8),ease-in-out] group-hover:translate-y-0 group-hover:opacity-100"
+      >
+        David V.
+      </p>
     </div>
   </section>
 </Layout>
+
+<style>
+  @layer demo;
+
+  @layer demo {
+    .profiles {
+      --size: 200px;
+      --img-shadow: drop-shadow(5px 5px 2px rgba(0 0 0 / 0.5));
+      --name-txt-clr: #eee;
+      --bg-clr: steelblue; /* only displayed if no background image defined */
+      --bg-blur: 0; /* background image default blur */
+      --bg-blur-hover: 20px; /* background image blur on hover */
+
+      margin: 20vh auto;
+      width: fit-content;
+    }
+
+    .avatar {
+      position: relative;
+      width: var(--size);
+      height: var(--size); /* for older browsers */
+      aspect-ratio: 1;
+    }
+
+    .avatar-img {
+      /* clip-path: path("M 0 -50 L 200 -50 L 200 150 C 100 150 0 260 0 150 Z"); */
+
+      clip-path: path("M 0 -75 L 200 0 L 200 225 C 150 200 0 375 0 200 Z");
+    }
+
+    .avatar-img::before {
+      content: "";
+      position: absolute;
+      inset: 60% 5% -30% 5%;
+      z-index: -1;
+      border-radius: 12px;
+      background-color: var(
+        --bg-clr
+      ); /* fallback if image not defined as custom property */
+      background-image: var(--bg-img);
+      background-size: cover;
+      background-position: center;
+      filter: blur(var(--bg-blur));
+      transition: filter 300ms ease-in-out;
+    }
+    .avatar-img > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition:
+        scale 300ms,
+        filter 300ms;
+      transform-origin: bottom;
+      scale: var(--img-scale, 0.9);
+      filter: var(--img-shadow);
+    }
+
+    .avatar > p {
+      font-size: 1.4rem;
+      color: var(--name-txt-clr);
+      position: absolute;
+      bottom: -1rem;
+      right: 0.25rem;
+      translate: 0 var(--name-y, -50px);
+      opacity: var(--name-opacity, 0);
+      z-index: -1;
+      transition-name: translate, opacity;
+      transition-delay: 150ms;
+      transition-duration: 300ms;
+      transition-timing-function:
+        cubic-bezier(0.47, 1.64, 0.41, 0.8), ease-in-out;
+    }
+
+    /* all hover effects as custom properties */
+    .avatar:hover {
+      --img-scale: 1.1;
+      --img-shadow: drop-shadow(10px 15px 4px rgba(0 0 0 / 0.5));
+      --name-y: 0;
+      --name-opacity: 1;
+      --bg-blur: var(--bg-blur-hover);
+    }
+  }
+</style>
