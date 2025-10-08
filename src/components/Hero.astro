@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import avatar from "../assets/avatar.png";
+import Avatar from "../components/Avatar.astro";
 ---
 
 <section
-  class="flex min-h-[clamp(5svh,30rem,80svh)] flex-col items-center justify-center overflow-hidden px-[clamp(1rem,2vw,3rem)]"
+  class="mt-4 flex min-h-[clamp(5svh,30rem,80svh)] flex-col items-center justify-center px-[clamp(1rem,2vw,3rem)]"
 >
-  <div class="w-full max-w-6xl space-y-[clamp(1rem,1rem+1vw,1.25rem)]">
+  <div class="flex w-full max-w-3xl flex-col gap-4">
     <div
       class="flex w-fit items-center gap-2 rounded-full border border-secondary/50 px-3 py-1 text-sm font-medium text-text"
     >
@@ -20,18 +20,22 @@ import avatar from "../assets/avatar.png";
       <span>Available for projects</span>
     </div>
 
-    <div class="flex items-center justify-between">
-      <h1 class="text-[clamp(1rem,1rem+3vw,3rem)] font-extrabold text-primary">
-        Hey, I'm Ngoc. <br /> A software engineer.
-      </h1>
-    </div>
+    <Avatar />
+    <h1 class="font-pixel text-[clamp(1rem,1rem+3vw,3rem)] text-primary">
+      Hey, I'm Ngoc.
+    </h1>
 
-    <p
-      class="text-[clamp(1rem,0.9rem+0.5vw,1.25rem)] leading-[clamp(1.5,1.3+0.3vw,1.8)] text-balance text-text/70"
+    <div
+      class="flex flex-col gap-4 text-[clamp(1rem,0.9rem+0.5vw,1.25rem)] text-balance text-text/85"
     >
-      I tinker with code, Linux, and systems — stuff breaks, I fix it, and share
-      what I pick up along the way. To me, tech’s best when it’s playful,
-      digestible, and always a trade-off.
-    </p>
+      <p>I'm an Engineer mostly focus on the software part currently.</p>
+      <p>
+        I tinker and write about code, linux and lesson picked up along the way.
+      </p>
+      <p>
+        I belive software and tech could be playful and fulfiling rather than
+        just a means to an end.
+      </p>
+    </div>
   </div>
 </section>

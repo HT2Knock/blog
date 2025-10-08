@@ -5,6 +5,8 @@
     "Inter Variable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
+  --font-pixel: "Silkscreen", system-ui;
+
   --color-text: oklch(15% 0.01 274);
   --color-background: oklch(89% 0.015 282);
   --color-primary: oklch(40% 0.15 263);
