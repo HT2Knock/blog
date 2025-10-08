@@ -3,10 +3,15 @@ import { Image } from "astro:assets";
 import avatar from "../assets/avatar_animeted.png";
 ---
 
-<div class="group relative aspect-square w-40 sm:w-48">
-  <div
-    class="relative [clip-path:path('M_0_-75_L_200_0_L_200_225_C_150_200_0_375_0_200_Z')]"
-  >
+<div id="avatar" class="group relative aspect-square w-40 sm:w-48">
+  <div class="relative [clip-path:url(#avatarShape)]">
+    <svg class="absolute h-0 w-0 opacity-0">
+      <defs>
+        <clipPath id="avatarShape" clipPathUnits="objectBoundingBox">
+          <path d="M 0,-0.25 L 1,0 L 1,0.75 C 0.75,0.67 0,1.25 0,0.67 Z"></path>
+        </clipPath>
+      </defs>
+    </svg>
     <div
       class="absolute inset-x-[5%] top-[40%] bottom-0 -z-10 rounded-3xl bg-secondary bg-cover bg-center transition-all duration-300 ease-in-out group-hover:blur-lg"
     >
