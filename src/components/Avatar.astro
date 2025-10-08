@@ -3,28 +3,25 @@ import { Image } from "astro:assets";
 import avatar from "../assets/avatar_animeted.png";
 ---
 
-<div class="group relative aspect-square w-[200px]">
-  <!-- Avatar Image Container -->
+<div class="group relative aspect-square w-40 sm:w-48">
   <div
     class="relative [clip-path:path('M_0_-75_L_200_0_L_200_225_C_150_200_0_375_0_200_Z')]"
   >
-    <!-- Background blur effect -->
     <div
-      class="blur-0 absolute inset-x-[5%] top-[40%] bottom-0 -z-10 rounded-3xl bg-secondary bg-cover bg-center transition-[filter] duration-300 ease-in-out group-hover:blur-[20px]"
+      class="absolute inset-x-[5%] top-[40%] bottom-0 -z-10 rounded-3xl bg-secondary bg-cover bg-center transition-all duration-300 ease-in-out group-hover:blur-lg"
     >
     </div>
 
-    <!-- Avatar Image -->
     <Image
       src={avatar}
       alt="Ngoc headshot"
-      class="h-full w-full origin-bottom scale-90 object-cover [filter:drop-shadow(5px_5px_2px_rgba(0,0,0,0.5))] transition-[scale,filter] duration-300 group-hover:scale-110 group-hover:[filter:drop-shadow(10px_15px_4px_rgba(0,0,0,0.5))]"
+      aria-label="Avatar of HT2Knock"
+      class="group-hover:drop-shadow[10px_15px_4px_rgba(0,0,0,0.5)] h-full w-full origin-bottom scale-90 object-cover drop-shadow-[5px_5px_2px_rgba(0,0,0,0.5)] transition-transform duration-300 group-hover:scale-110"
     />
   </div>
 
-  <!-- Name Text -->
   <p
-    class="absolute right-1 -bottom-4 -z-10 -translate-y-[50px] font-pixel text-[1.4rem] opacity-0 transition-[translate,opacity] delay-150 duration-300 [transition-timing-function:cubic-bezier(0.47,1.64,0.41,0.8),ease-in-out] group-hover:translate-y-0 group-hover:opacity-100"
+    class="absolute right-0 -bottom-2 -z-10 -translate-y-10 font-pixel text-primary opacity-0 transition-all delay-150 duration-300 [transition-timing-function:cubic-bezier(0.47,1.64,0.41,0.8),ease-in-out] group-hover:translate-y-0 group-hover:opacity-100 motion-reduce:transition-none"
   >
     HT2Knock
   </p>
