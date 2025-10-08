@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import avatar from "../assets/avatar_animeted.png";
+import avatarAnimated from "../assets/avatar_animeted.png";
+import avatarStatic from "../assets/avatar.png";
 ---
 
 <div id="avatar" class="group relative aspect-square w-40 sm:w-48">
@@ -18,16 +19,23 @@ import avatar from "../assets/avatar_animeted.png";
     </div>
 
     <Image
-      src={avatar}
+      src={avatarStatic}
       alt="Ngoc headshot"
-      aria-label="Avatar of HT2Knock"
-      class="group-hover:drop-shadow[10px_15px_4px_rgba(0,0,0,0.5)] h-full w-full origin-bottom scale-90 object-cover drop-shadow-[5px_5px_2px_rgba(0,0,0,0.5)] transition-transform duration-300 group-hover:scale-110"
+      aria-label="Avatar of ngoc"
+      class="absolute inset-0 h-full w-full origin-bottom scale-90 object-cover opacity-0 drop-shadow-[10px_15px_4px_rgba(0,0,0,0.5)] transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:scale-110 group-hover:opacity-100"
+    />
+
+    <Image
+      src={avatarAnimated}
+      alt="Ngoc headshot"
+      aria-label="Animated avatar of ngoc"
+      class="h-full w-full origin-bottom scale-90 object-cover drop-shadow-[5px_5px_2px_rgba(0,0,0,0.5)] transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:opacity-0"
     />
   </div>
 
   <p
-    class="absolute right-0 -bottom-2 -z-10 -translate-y-10 font-pixel text-primary opacity-0 transition-all delay-150 duration-300 [transition-timing-function:cubic-bezier(0.47,1.64,0.41,0.8),ease-in-out] group-hover:translate-y-0 group-hover:opacity-100 motion-reduce:transition-none"
+    class="absolute right-0 -bottom-4 -z-10 -translate-y-10 font-pixel text-primary opacity-0 transition-all delay-150 duration-300 [transition-timing-function:cubic-bezier(0.47,1.64,0.41,0.8),ease-in-out] group-hover:translate-y-0 group-hover:opacity-100 motion-reduce:transition-none lg:-bottom-7"
   >
-    HT2Knock
+    👀 Human btw!
   </p>
 </div>

@@ -57,9 +57,3 @@
     }
   }
 }
-
-@layer base {
-  body {
-    @apply leading-relaxed; /* 1.625 */
-  }
-}
