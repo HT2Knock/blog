@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
 
 const allPosts = await getCollection("blog");
 const tags = [...new Set(allPosts.flatMap((post: any) => post.data.tags))];
