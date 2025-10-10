@@ -1,0 +1,45 @@
+---
+import { PronouceNameTile } from "@/components/islands/PronounceNameTile";
+import { FlagTile } from "@/components/islands/FlagTile";
+import { KeyboardTile } from "@/components/islands/KeyboardTile";
+import { PodcastTile } from "@/components/islands/PodcastTile";
+---
+
+<section
+  id="bento-grid"
+  class="grid h-full min-h-[clamp(5svh,30rem,80svh)] w-full max-w-6xl gap-2 px-8 text-center sm:grid-cols-2 lg:grid-cols-3 dark:text-background"
+>
+  <div class="text- col-span-2 rounded-2xl bg-[oklch(70%_0.1_263)] p-4">
+    <FlagTile client:visible />
+  </div>
+
+  <div class="rounded-2xl bg-[oklch(75%_0.08_149)] p-4">
+    <PronouceNameTile client:visible />
+  </div>
+
+  <div class="row-span-2 rounded-2xl bg-[oklch(65%_0.12_272)] p-4">
+    <KeyboardTile client:visible />
+  </div>
+
+  <div
+    class="rounded-2xl bg-[oklch(85%_0.03_282)] p-4 text-primary dark:text-secondary"
+  >
+    <PodcastTile client:visible />
+  </div>
+
+  <div
+    class="row-span-3 rounded-2xl bg-[oklch(40%_0.15_263)] p-4 text-background dark:text-text"
+  >
+    <p>🏃‍♂️ 2 Half-Marathons → Training for Full 2026</p>
+  </div>
+
+  <div class="row-span-2 rounded-2xl bg-[oklch(68%_0.06_149)] p-4">
+    <p>💻 btw, I use Nvim + Hyprland</p>
+  </div>
+
+  <div
+    class="rounded-2xl bg-[oklch(85%_0.03_282)] p-4 text-text dark:text-background"
+  >
+    <p>It's the other thing that I suppose to remember</p>
+  </div>
+</section>

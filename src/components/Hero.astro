@@ -3,50 +3,49 @@ import Avatar from "@/components/Avatar.astro";
 ---
 
 <section
-  class="mt-4 flex min-h-[clamp(5svh,30rem,80svh)] flex-col items-center justify-center px-[clamp(1rem,2vw,3rem)]"
+  class="flex min-h-[clamp(5svh,30rem,80svh)] w-full max-w-6xl flex-col-reverse items-center justify-between px-8 lg:flex-row"
 >
-  <div
-    class="flex w-full max-w-6xl flex-col-reverse justify-between lg:flex-row"
-  >
-    <div>
-      <h1 class="font-pixel text-[clamp(1rem,1rem+3vw,3rem)] text-primary">
-        <span class="origin-wave inline-block motion-safe:animate-wave">👋</span
-        >
-        Hello there, I'm Ngoc.
-      </h1>
-
-      <div
-        class="mt-4 flex flex-col gap-4 text-[clamp(0.5rem,0.9rem+0.5vw,1.25rem)] text-balance text-text/85"
+  <div>
+    <h1
+      class="font-pixel text-[clamp(1rem,1rem+3vw,3rem)] text-balance text-primary"
+    >
+      <span class="origin-wave hidden motion-safe:animate-wave sm:inline-block"
+        >👋</span
       >
-        <p>
-          I’m a software engineer who loves building things that actually work.
-        </p>
-        <p>
-          I tinker with code, Linux, and systems — and share what I learn along
-          the way.
-        </p>
-        <p>
-          I believe tech should be playful and fulfilling — not just a means to
-          an end.
-        </p>
+      Hello there! I'm Ngoc.
+    </h1>
+
+    <div
+      class="mt-4 grid gap-4 text-[clamp(0.5rem,0.9rem+0.5vw,1.25rem)] text-pretty text-text/70"
+    >
+      <p>
+        I’m a software engineer who loves building things that actually work.
+      </p>
+      <p>
+        I tinker with code, Linux, and systems — and share what I learn along
+        the way.
+      </p>
+      <p>
+        I believe tech should be playful and fulfilling — not just a means to an
+        end.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <div
+      class="flex w-fit items-center gap-2 rounded-full border border-secondary/50 px-3 py-1 text-sm font-medium text-text"
+    >
+      <div class="relative flex size-1.5">
+        <span
+          class="absolute inline-flex h-full w-full animate-ping-slow rounded-full bg-accent/50"
+        ></span>
+        <span class="relative inline-flex size-1.5 rounded-full bg-accent"
+        ></span>
       </div>
+      <span>Available for projects</span>
     </div>
 
-    <div>
-      <div
-        class="flex w-fit items-center gap-2 rounded-full border border-secondary/50 px-3 py-1 text-sm font-medium text-text"
-      >
-        <div class="relative flex size-1.5">
-          <span
-            class="absolute inline-flex h-full w-full animate-ping-slow rounded-full bg-accent/50"
-          ></span>
-          <span class="relative inline-flex size-1.5 rounded-full bg-accent"
-          ></span>
-        </div>
-        <span>Available for projects</span>
-      </div>
-
-      <Avatar />
-    </div>
+    <Avatar />
   </div>
 </section>
