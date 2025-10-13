@@ -7,39 +7,58 @@ import { PodcastTile } from "@/components/islands/PodcastTile";
 
 <section
   id="bento-grid"
-  class="grid h-full min-h-[clamp(5svh,30rem,80svh)] w-full max-w-6xl gap-2 px-8 text-center sm:grid-cols-2 lg:grid-cols-3 dark:text-background"
+  class="mx-auto grid max-h-[90svh] min-h-[60vh] w-full max-w-[90rem] auto-rows-[minmax(200px,1fr)] grid-cols-1 gap-2 px-4 text-center sm:grid-cols-2 sm:px-6 md:px-8 lg:grid-cols-3 dark:text-background"
 >
-  <div class="text- col-span-2 rounded-2xl bg-[oklch(70%_0.1_263)] p-4">
+  <!-- Flag Tile -->
+  <div
+    class="rounded-2xl bg-[oklch(70%_0.1_263)] p-4 sm:col-span-2 sm:row-span-1 sm:p-6 lg:col-span-2"
+  >
     <FlagTile client:visible />
   </div>
 
-  <div class="rounded-2xl bg-[oklch(75%_0.08_149)] p-4">
+  <!-- Pronounce Name Tile -->
+  <div
+    class="rounded-2xl bg-[oklch(75%_0.08_149)] p-4 sm:col-span-2 sm:row-span-1 sm:p-6 lg:col-span-1"
+  >
     <PronouceNameTile client:visible />
   </div>
 
-  <div class="row-span-2 rounded-2xl bg-[oklch(65%_0.12_272)] p-4">
+  <!-- Keyboard Tile -->
+  <div
+    class="rounded-2xl bg-[oklch(65%_0.12_272)] p-4 sm:col-span-2 sm:p-6 lg:col-span-1 lg:row-span-2"
+  >
     <KeyboardTile client:visible />
   </div>
 
+  <!-- Podcast Tile -->
   <div
-    class="rounded-2xl bg-[oklch(85%_0.03_282)] p-4 text-primary dark:text-secondary"
+    class="rounded-2xl bg-[oklch(85%_0.03_282)] p-4 text-primary sm:col-span-1 sm:row-span-1 sm:p-6 lg:col-span-1 dark:text-secondary"
   >
     <PodcastTile client:visible />
   </div>
 
+  <!-- Marathon Tile -->
   <div
-    class="row-span-3 rounded-2xl bg-[oklch(40%_0.15_263)] p-4 text-background dark:text-text"
+    class="flex items-center justify-center rounded-2xl bg-[oklch(40%_0.15_263)] p-4 text-background sm:col-span-1 sm:p-6 lg:col-span-1 lg:row-span-3 dark:text-text"
   >
-    <p>🏃‍♂️ 2 Half-Marathons → Training for Full 2026</p>
+    <p class="text-base sm:text-lg">
+      🏃‍♂️ 2 Half-Marathons → Training for Full 2026
+    </p>
   </div>
 
-  <div class="row-span-2 rounded-2xl bg-[oklch(68%_0.06_149)] p-4">
-    <p>💻 btw, I use Nvim + Hyprland</p>
+  <!-- Nvim Tile -->
+  <div
+    class="flex items-center justify-center rounded-2xl bg-[oklch(68%_0.06_149)] p-4 sm:col-span-2 sm:p-6 lg:col-span-1 lg:row-span-2"
+  >
+    <p class="text-base sm:text-lg">💻 btw, I use Nvim + Hyprland</p>
   </div>
 
+  <!-- Other Thing Tile -->
   <div
-    class="rounded-2xl bg-[oklch(85%_0.03_282)] p-4 text-text dark:text-background"
+    class="rounded-2xl bg-[oklch(85%_0.03_282)] p-4 text-text sm:col-span-2 sm:row-span-1 sm:p-6 lg:col-span-1 dark:text-background"
   >
-    <p>It's the other thing that I suppose to remember</p>
+    <p class="text-sm sm:text-base">
+      It's the other thing that I suppose to remember
+    </p>
   </div>
 </section>
