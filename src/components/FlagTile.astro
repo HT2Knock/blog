@@ -9,7 +9,7 @@ const { text, country } = await getDistanceText();
   class="relative grid place-content-center rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md dark:shadow-black/50"
 >
   <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[20%]">
-    <div class="flag-wave-container">
+    <div class="flag-wave-container motion-safe:after:animate-flag-wave">
       <svg
         class="h-30 rounded"
         viewBox="0 0 30 20"
@@ -37,44 +37,3 @@ const { text, country } = await getDistanceText();
     }
   </p>
 </div>
-
-<style>
-  .flag-wave-container {
-    position: relative;
-    display: inline-block;
-  }
-
-  .flag-wave-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    background-image: repeating-linear-gradient(
-      100deg,
-      transparent 0,
-      rgba(0, 0, 0, 0.3) 15%,
-      transparent 25%,
-      rgba(0, 0, 0, 0.3) 35%,
-      rgba(0, 0, 0, 0.3) 40%,
-      transparent 55%,
-      rgba(0, 0, 0, 0.3) 65%,
-      rgba(0, 0, 0, 0.3) 75%,
-      transparent 90%
-    );
-    background-size: 200% 100%;
-    animation: wave 3s linear infinite;
-    pointer-events: none;
-  }
-
-  @keyframes wave {
-    0% {
-      background-position: 0% 0;
-    }
-    100% {
-      background-position: 200% 0;
-    }
-  }
-</style>
