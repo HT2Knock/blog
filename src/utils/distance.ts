@@ -24,7 +24,7 @@ export const getDistanceText = async (): Promise<string> => {
 
   try {
     const url = new URL("https://ipinfo.io/json");
-    if (import.meta.env.DEV) {
+    if (!import.meta.env.DEV) {
       url.searchParams.append("token", import.meta.env.IP_INFO_KEY);
     }
 
