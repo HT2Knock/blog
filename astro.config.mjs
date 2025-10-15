@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import icon from "astro-icon";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -10,4 +10,10 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  env: {
+    schema: {
+      IP_INFO_KEY: envField.string({ context: "server", access: "secret" }),
+    },
+  },
 });
+

@@ -2,7 +2,7 @@
 import { getDistanceText } from "@/utils/distance";
 import { Icon } from "astro-icon/components";
 
-const distanceText = await getDistanceText();
+const { text, country } = await getDistanceText();
 ---
 
 <div
@@ -24,9 +24,17 @@ const distanceText = await getDistanceText();
     </div>
   </div>
   <p class="mt-24">
-    I'm from Ho Chi Minh City, Vietnam which <span class="text-accent italic"
-      >{distanceText}</span
-    > according to your <Icon name="mdi:ip" class="inline-block" />
+    I'm from Ho Chi Minh City, Vietnam which
+    <span class="text-accent italic">{text}</span>
+    {
+      country ? (
+        <span>{`fellow ${country}`} </span>
+      ) : (
+        <span>
+          according to your <Icon name="mdi:ip" class="inline-block" />{" "}
+        </span>
+      )
+    }
   </p>
 </div>
 
