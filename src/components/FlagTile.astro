@@ -6,12 +6,14 @@ const { text, country } = await getDistanceText();
 ---
 
 <div
-  class="relative grid place-content-center rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md dark:shadow-black/50"
+  class="relative flex flex-col items-center justify-center gap-3 rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md lg:relative dark:shadow-black/50"
 >
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[20%]">
+  <div
+    class="lg:absolute lg:top-0 lg:left-1/2 lg:mb-4 lg:-translate-x-1/2 lg:-translate-y-[20%]"
+  >
     <div class="flag-wave-container motion-safe:after:animate-flag-wave">
       <svg
-        class="h-30 rounded"
+        class="h-20 w-30 rounded lg:h-24 lg:w-36"
         viewBox="0 0 30 20"
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
@@ -23,7 +25,7 @@ const { text, country } = await getDistanceText();
       </svg>
     </div>
   </div>
-  <p class="mt-24">
+  <p class="w-4/5 text-sm sm:text-base lg:mt-24">
     I'm from Ho Chi Minh City, Vietnam which
     <span class="text-accent italic">{text}</span>
     {
