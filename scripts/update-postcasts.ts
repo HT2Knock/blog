@@ -55,13 +55,8 @@ async function updatePodcasts() {
       name: i.show.name,
       publisher: i.show.publisher,
       description: i.show.description,
-      cover: {
-        sm: i.show.images?.[0]?.url,
-        md: i.show.images?.[1]?.url,
-        lg: i.show.images?.[images.length - 1]?.url,
-      },
+      cover: i.show.images?.[images.length - 1]?.url,
       url: i.show.external_urls.spotify,
-      lastUpdated: new Date().toISOString(),
     };
   });
 

@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon/components";
+import podcasts from "../data/podcasts.json";
+---
+
+<div
+  class="relative flex flex-col justify-evenly overflow-hidden rounded-2xl border border-primary/20 bg-primary/10 shadow-lg backdrop-blur-md lg:row-span-2 dark:shadow-black/50"
+>
+  <h3 class="flex items-center justify-center p-4 text-lg font-semibold">
+    <Icon name="lucide:podcast" class="inline translate-y-[-1px]" />
+    Podcast Pick
+  </h3>
+  <div class="embla overflow-hidden">
+    <div class="embla__container flex gap-3 px-3">
+      {
+        podcasts.map((podcast) => (
+          <div class="embla__slide min-w-1/4 md:min-w-2/4 lg:min-w-3/4">
+            <a href={podcast.url}>
+              <div class="group relative overflow-hidden rounded">
+                <div
+                  class="aspect-square rounded bg-cover bg-center"
+                  style={`background-image: url(${podcast.cover})`}
+                />
+                <button class="absolute top-3 right-3 rounded-full bg-white p-2 text-black opacity-0 transition group-hover:opacity-100">
+                  <Icon name="lucide:play" />
+                </button>
+                <div class="absolute inset-0 hidden flex-col justify-end gap-2 bg-black/60 p-4 text-white opacity-0 transition-all duration-300 group-hover:opacity-100 lg:flex">
+                  <p class="line-clamp-1 font-semibold">{podcast.name}</p>
+                  <p class="line-clamp-1 text-sm text-gray-200">
+                    {podcast.publisher}
+                  </p>
+                  <p class="line-clamp-2 text-xs text-gray-300">
+                    {podcast.description}
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<script>
+  import EmblaCarousel from "embla-carousel";
+  import AutoPlay from "embla-carousel-autoplay";
+
+  const emblaNode = document.querySelector(".embla");
+  if (emblaNode) {
+    const embla = EmblaCarousel(emblaNode as HTMLElement, { loop: true }, [
+      AutoPlay(),
+    ]);
+  }
+</script>

@@ -4,90 +4,55 @@
     "name": "BigDeal",
     "publisher": "Codie Sanchez",
     "description": "You can change your life and make a dent on the world. This podcast uncovers the unfiltered lessons from the smartest minds straight to you, in conversations so honest you feel guilty listening in. We believe the current way of thinking is not working. The average person has become unhappy, unhealthy and financially struggling. You are not that person. This podcast will kick you in the shin with truth and tactics they should have taught us but gatekept. Hosted by Codie Sanchez, entrepreneur, investor and reformed journalist. You are a BigDeal to us.",
-    "cover": {
-      "sm": "https://i.scdn.co/image/ab6765630000f68d90aad320fdc5fb68aca0ddb9",
-      "md": "https://i.scdn.co/image/ab67656300005f1f90aad320fdc5fb68aca0ddb9",
-      "lg": "https://i.scdn.co/image/ab6765630000ba8a90aad320fdc5fb68aca0ddb9"
-    },
-    "url": "https://open.spotify.com/show/6N6KqZOQeu7srMoEzSjNj2",
-    "lastUpdated": "2025-10-17T06:09:30.951Z"
+    "cover": "https://i.scdn.co/image/ab6765630000ba8a90aad320fdc5fb68aca0ddb9",
+    "url": "https://open.spotify.com/show/6N6KqZOQeu7srMoEzSjNj2"
   },
   {
     "id": "01A062kejnXFkJE01bjN5J",
     "name": "The Standup",
     "publisher": "TJ DeVries",
     "description": "ThePrimeagen and Teej host The Standup - a podcast where we talk about software, life, memes and more. It’s fun, it can be informative and sometimes Trash is also here. Joined by regular guests like Casey Muratori, Carson Gross and more!",
-    "cover": {
-      "sm": "https://i.scdn.co/image/ab6765630000f68d82a040f5bbf4b2e94a351dc8",
-      "md": "https://i.scdn.co/image/ab67656300005f1f82a040f5bbf4b2e94a351dc8",
-      "lg": "https://i.scdn.co/image/ab6765630000ba8a82a040f5bbf4b2e94a351dc8"
-    },
-    "url": "https://open.spotify.com/show/01A062kejnXFkJE01bjN5J",
-    "lastUpdated": "2025-10-17T06:09:30.951Z"
+    "cover": "https://i.scdn.co/image/ab6765630000ba8a82a040f5bbf4b2e94a351dc8",
+    "url": "https://open.spotify.com/show/01A062kejnXFkJE01bjN5J"
   },
   {
     "id": "4FYpq3lSeQMAhqNI81O0Cn",
     "name": "Planet Money",
     "publisher": "NPR",
     "description": "Wanna see a trick? Give us any topic and we can tie it back to the economy. At Planet Money, we explore the forces that shape our lives and bring you along for the ride. Don't just understand the economy – understand the world.Wanna go deeper? Subscribe to Planet Money+ and get sponsor-free episodes of Planet Money, The Indicator, and Planet Money Summer School. Plus access to bonus content. It's a new way to support the show you love. Learn more at plus.npr.org/planetmoney",
-    "cover": {
-      "sm": "https://i.scdn.co/image/ab6765630000f68dba50e2aeaa4c75e693ad3617",
-      "md": "https://i.scdn.co/image/ab67656300005f1fba50e2aeaa4c75e693ad3617",
-      "lg": "https://i.scdn.co/image/ab6765630000ba8aba50e2aeaa4c75e693ad3617"
-    },
-    "url": "https://open.spotify.com/show/4FYpq3lSeQMAhqNI81O0Cn",
-    "lastUpdated": "2025-10-17T06:09:30.951Z"
+    "cover": "https://i.scdn.co/image/ab6765630000ba8aba50e2aeaa4c75e693ad3617",
+    "url": "https://open.spotify.com/show/4FYpq3lSeQMAhqNI81O0Cn"
   },
   {
     "id": "4kYCRYJ3yK5DQbP5tbfZby",
     "name": "Syntax - Tasty Web Development Treats",
     "publisher": "Wes Bos",
     "description": "Full Stack Developers Wes Bos and Scott Tolinski dive deep into web development topics, explaining how they work and talking about their own experiences. They cover from JavaScript frameworks like React, to the latest advancements in CSS to simplifying web tooling.",
-    "cover": {
-      "sm": "https://i.scdn.co/image/ab6765630000f68d022aa3738b34a57c09be1410",
-      "md": "https://i.scdn.co/image/ab67656300005f1f022aa3738b34a57c09be1410",
-      "lg": "https://i.scdn.co/image/ab6765630000ba8a022aa3738b34a57c09be1410"
-    },
-    "url": "https://open.spotify.com/show/4kYCRYJ3yK5DQbP5tbfZby",
-    "lastUpdated": "2025-10-17T06:09:30.951Z"
+    "cover": "https://i.scdn.co/image/ab6765630000ba8a022aa3738b34a57c09be1410",
+    "url": "https://open.spotify.com/show/4kYCRYJ3yK5DQbP5tbfZby"
   },
   {
     "id": "5bBki72YeKSLUqyD94qsuJ",
     "name": "The Changelog: Software Development, Open Source",
     "publisher": "Changelog Media",
     "description": "Software's best weekly news brief, deep technical interviews & talk show.",
-    "cover": {
-      "sm": "https://i.scdn.co/image/ab6765630000f68d5848abe815d712799a336519",
-      "md": "https://i.scdn.co/image/ab67656300005f1f5848abe815d712799a336519",
-      "lg": "https://i.scdn.co/image/ab6765630000ba8a5848abe815d712799a336519"
-    },
-    "url": "https://open.spotify.com/show/5bBki72YeKSLUqyD94qsuJ",
-    "lastUpdated": "2025-10-17T06:09:30.951Z"
+    "cover": "https://i.scdn.co/image/ab6765630000ba8a5848abe815d712799a336519",
+    "url": "https://open.spotify.com/show/5bBki72YeKSLUqyD94qsuJ"
   },
   {
     "id": "79CkJF3UJTHFV8Dse3Oy0P",
     "name": "Huberman Lab",
     "publisher": "Scicomm Media",
     "description": "The Huberman Lab podcast is hosted by Andrew Huberman, Ph.D., a neuroscientist and tenured professor in the department of neurobiology, and by courtesy, psychiatry and behavioral sciences at Stanford School of Medicine. The podcast discusses neuroscience and science-based tools, including how our brain and its connections with the organs of our body control our perceptions, our behaviors, and our health, as well as existing and emerging tools for measuring and changing how our nervous system works.Huberman has made numerous significant contributions to the fields of brain development, brain function, and neural plasticity, which is the ability of our nervous system to rewire and learn new behaviors, skills, and cognitive functioning. He is a McKnight Foundation and Pew Foundation Fellow and was awarded the Cogan Award, given to the scientist making the most significant discoveries in the study of vision, in 2017. Work from the Huberman Laboratory at Stanford School of Medicine has been published in top journals, including Nature, Science, and Cell, and has been featured in TIME, BBC, Scientific American, Discover, and other top media outlets.In 2021, Dr. Huberman launched the Huberman Lab podcast. The podcast is frequently ranked in the top 10 of all podcasts globally and is often ranked #1 in the categories of Science, Education, and Health & Fitness.",
-    "cover": {
-      "sm": "https://i.scdn.co/image/ab6765630000f68d66aed32f8066a72781b3b12a",
-      "md": "https://i.scdn.co/image/ab67656300005f1f66aed32f8066a72781b3b12a",
-      "lg": "https://i.scdn.co/image/ab6765630000ba8a66aed32f8066a72781b3b12a"
-    },
-    "url": "https://open.spotify.com/show/79CkJF3UJTHFV8Dse3Oy0P",
-    "lastUpdated": "2025-10-17T06:09:30.951Z"
+    "cover": "https://i.scdn.co/image/ab6765630000ba8a66aed32f8066a72781b3b12a",
+    "url": "https://open.spotify.com/show/79CkJF3UJTHFV8Dse3Oy0P"
   },
   {
     "id": "0XrOqvxlqQI6bmdYHuIVnr",
     "name": "Modern Wisdom",
     "publisher": "Chris Williamson",
     "description": "Life is hard. This podcast will help. Lessons from the greatest thinkers on the planet with Chris Williamson. Including guests like David Goggins, Dr Jordan Peterson, Naval Ravikant, Sam Harris, Jocko Willink, Dr Andrew Huberman, Dr Julie Smith, Steven Bartlett, Ryan Holiday, Robert Greene, Matthew McConaughey, Alain de Botton, Alex Hormozi, Tony Robbins, Chris Bumstead, Mark Manson and more.",
-    "cover": {
-      "sm": "https://i.scdn.co/image/ab6765630000f68dc27a8d722b0ba5ca0f788f35",
-      "md": "https://i.scdn.co/image/ab67656300005f1fc27a8d722b0ba5ca0f788f35",
-      "lg": "https://i.scdn.co/image/ab6765630000ba8ac27a8d722b0ba5ca0f788f35"
-    },
-    "url": "https://open.spotify.com/show/0XrOqvxlqQI6bmdYHuIVnr",
-    "lastUpdated": "2025-10-17T06:09:30.951Z"
+    "cover": "https://i.scdn.co/image/ab6765630000ba8ac27a8d722b0ba5ca0f788f35",
+    "url": "https://open.spotify.com/show/0XrOqvxlqQI6bmdYHuIVnr"
   }
 ]

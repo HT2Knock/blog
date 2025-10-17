@@ -1,7 +1,7 @@
 ---
 import { PronouceNameTile } from "@/components/islands/PronounceNameTile";
 import { KeyboardTile } from "@/components/islands/KeyboardTile";
-import { PodcastTile } from "@/components/islands/PodcastTile";
+import PodcastTile from "@/components/PodcastTile.astro";
 import FlagTile from "@/components/FlagTile.astro";
 ---
 
@@ -9,32 +9,25 @@ import FlagTile from "@/components/FlagTile.astro";
   id="bento-grid"
   class="grid max-h-[90svh] min-h-[60vh] w-full max-w-[70rem] auto-rows-[minmax(200px,1fr)] grid-cols-1 gap-2 px-4 text-center sm:grid-cols-2 sm:px-6 md:px-8 lg:grid-cols-3 lg:gap-4"
 >
+  <PodcastTile />
   <FlagTile />
-
   <!-- Pronounce Name Tile -->
   <div
-    class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md sm:col-span-2 sm:row-span-1 sm:p-6 lg:col-span-1"
+    class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
   >
     <PronouceNameTile client:visible />
   </div>
 
   <!-- Keyboard Tile -->
   <div
-    class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md sm:col-span-2 sm:p-6 lg:col-span-1 lg:row-span-2"
+    class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
   >
     <KeyboardTile client:visible />
   </div>
 
-  <!-- Podcast Tile -->
-  <div
-    class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md sm:col-span-1 sm:row-span-1 sm:p-6 lg:col-span-1"
-  >
-    <PodcastTile client:visible />
-  </div>
-
   <!-- Marathon Tile -->
   <div
-    class="flex items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md sm:col-span-1 sm:p-6 lg:col-span-1 lg:row-span-3"
+    class="flex items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
   >
     <p class="text-base sm:text-lg">
       🏃‍♂️ 2 Half-Marathons → Training for Full 2026
@@ -43,17 +36,15 @@ import FlagTile from "@/components/FlagTile.astro";
 
   <!-- Nvim Tile -->
   <div
-    class="flex items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md sm:col-span-2 sm:p-6 lg:col-span-1 lg:row-span-2"
+    class="flex items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
   >
     <p class="text-base sm:text-lg">💻 btw, I use Nvim + Hyprland</p>
   </div>
 
   <!-- Other Thing Tile -->
   <div
-    class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md sm:col-span-2 sm:row-span-1 sm:p-6 lg:col-span-1"
+    class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
   >
-    <p class="text-sm sm:text-base">
-      It's the other thing that I suppose to remember
-    </p>
+    <p class="text-sm sm:text-base">I'm a coffee enjoyer</p>
   </div>
 </section>
