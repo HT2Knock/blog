@@ -16,15 +16,15 @@ import podcasts from "../data/podcasts.json";
         podcasts.map((podcast) => (
           <div class="embla__slide min-w-1/4 md:min-w-2/4 lg:min-w-3/4">
             <a href={podcast.url}>
-              <div class="group relative overflow-hidden rounded">
+              <div class="group relative rounded-xl">
                 <div
-                  class="aspect-square rounded bg-cover bg-center"
+                  class="aspect-square rounded-xl bg-cover bg-center"
                   style={`background-image: url(${podcast.cover})`}
                 />
-                <button class="absolute top-3 right-3 rounded-full bg-white p-2 text-black opacity-0 transition group-hover:opacity-100">
-                  <Icon name="lucide:play" />
+                <button class="absolute top-3 right-3 z-2 rounded-full bg-white/85 p-2 text-black opacity-0 transition group-hover:opacity-100">
+                  <Icon name="mdi:spotify" />
                 </button>
-                <div class="absolute inset-0 hidden flex-col justify-end gap-2 bg-black/60 p-4 text-white opacity-0 transition-all duration-300 group-hover:opacity-100 lg:flex">
+                <div class="absolute inset-0 hidden flex-col justify-end gap-2 rounded-xl bg-black/40 p-4 text-white opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:opacity-100 lg:flex">
                   <p class="line-clamp-1 font-semibold">{podcast.name}</p>
                   <p class="line-clamp-1 text-sm text-gray-200">
                     {podcast.publisher}

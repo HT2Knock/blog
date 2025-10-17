@@ -9,14 +9,13 @@ import FlagTile from "@/components/FlagTile.astro";
   id="bento-grid"
   class="grid max-h-[90svh] min-h-[60vh] w-full max-w-[70rem] auto-rows-[minmax(200px,1fr)] grid-cols-1 gap-2 px-4 text-center sm:grid-cols-2 sm:px-6 md:px-8 lg:grid-cols-3 lg:gap-4"
 >
-  <PodcastTile />
-  <FlagTile />
   <!-- Pronounce Name Tile -->
   <div
-    class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
+    class="col-span-2 rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
   >
     <PronouceNameTile client:visible />
   </div>
+  <FlagTile />
 
   <!-- Keyboard Tile -->
   <div
@@ -33,6 +32,8 @@ import FlagTile from "@/components/FlagTile.astro";
       🏃‍♂️ 2 Half-Marathons → Training for Full 2026
     </p>
   </div>
+
+  <PodcastTile />
 
   <!-- Nvim Tile -->
   <div
