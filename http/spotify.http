@@ -1,0 +1,16 @@
+### Get Artist
+
+GET https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb HTTP/1.1
+Authorization: Bearer {{$auth.token("client_credentials")}}
+
+
+### Get current user profile
+
+GET https://api.spotify.com/v1/me HTTP/1.1
+Authorization: Bearer {{$auth.token("spotify_me")}}
+
+
+### Get current user saved show
+
+GET https://api.spotify.com/v1/me/shows HTTP/1.1
+Authorization: Bearer {{$auth.token("spotify_me")}}
