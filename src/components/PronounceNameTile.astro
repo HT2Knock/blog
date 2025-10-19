@@ -1,0 +1,100 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  class="row-span-2 flex flex-col justify-evenly rounded-2xl border border-primary/20 bg-primary/10 p-6 shadow-lg backdrop-blur-md sm:col-span-2 sm:row-span-1 lg:p-8"
+>
+  <div
+    class="grid grid-cols-1 gap-6 sm:grid-cols-[1fr_auto_1fr] sm:items-center"
+  >
+    <!-- Accurate Pronunciation -->
+    <button
+      id="accurate-pronounce"
+      class="group flex cursor-pointer flex-col items-center gap-2 rounded-lg p-4 transition-all hover:bg-primary/10 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none active:scale-95"
+      type="button"
+      aria-label="Play accurate Vietnamese pronunciation"
+    >
+      <p class="text-center text-xl font-bold tracking-wide sm:text-2xl">
+        /ŋɔk̚ hwɨɲ/
+        <Icon
+          name="lucide:volume-2"
+          class="ml-2 inline-block h-5 w-5 transition-colors group-hover:text-secondary sm:h-6 sm:w-6"
+          aria-hidden="true"
+        />
+      </p>
+      <p class="text-sm text-text/70">Native Vietnamese</p>
+      <audio
+        id="audio-accurate-pronounce"
+        src="/audio/vietnames_name_pronounce.mp3"
+        preload="metadata"></audio>
+    </button>
+
+    <!-- Arrow Separator -->
+    <Icon
+      name="lucide:arrow-right"
+      class="hidden h-6 w-6 text-primary/50 sm:block"
+      aria-hidden="true"
+    />
+    <Icon
+      name="lucide:arrow-down"
+      class="mx-auto h-6 w-6 text-primary/50 sm:hidden"
+      aria-hidden="true"
+    />
+
+    <!-- Close Enough Pronunciation -->
+    <button
+      id="close-pronounce"
+      class="group flex cursor-pointer flex-col items-center gap-3 rounded-lg p-4 transition-all hover:bg-primary/10 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none active:scale-95"
+      type="button"
+      aria-label="Play English approximation pronunciation"
+    >
+      <p
+        class="text-center text-xl font-bold tracking-wide text-balance sm:text-2xl"
+      >
+        "Knock Hwin"
+        <Icon
+          name="lucide:volume-2"
+          class="ml-2 inline-block h-5 w-5 transition-colors group-hover:text-secondary sm:h-6 sm:w-6"
+          aria-hidden="true"
+        />
+      </p>
+      <p class="text-sm text-text/70">English Approximation</p>
+      <audio
+        id="audio-close-pronounce"
+        src="/audio/english_name_pronounce.mp3"
+        preload="metadata"></audio>
+    </button>
+  </div>
+
+  <!-- Help Text -->
+  <p class="text-center text-sm text-text/60 sm:text-base">
+    Save my name from being butchered <span class="text-white">😅</span>
+  </p>
+</div>
+
+<script>
+  const setupAudioButton = (buttonId: string, audioId: string) => {
+    const button = document.getElementById(buttonId);
+    const audio = document.getElementById(audioId) as HTMLAudioElement;
+
+    if (!button || !audio) return;
+
+    button.addEventListener("click", () => {
+      // Stop other audio if playing
+      const allAudio = document.querySelectorAll("audio");
+      allAudio.forEach((a) => {
+        if (a !== audio) a.pause();
+      });
+
+      // Reset and play
+      audio.currentTime = 0;
+      audio.play().catch((err) => {
+        console.error("Audio playback failed:", err);
+      });
+    });
+  };
+
+  setupAudioButton("accurate-pronounce", "audio-accurate-pronounce");
+  setupAudioButton("close-pronounce", "audio-close-pronounce");
+</script>
