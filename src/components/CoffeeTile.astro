@@ -1,0 +1,20 @@
+---
+import caffeine from "../assets/caffeine.svg";
+import { Image } from "astro:assets";
+---
+
+<div
+  class="group relative flex flex-col items-center justify-end rounded-2xl border border-primary/20 bg-primary/10 p-4 text-center shadow-lg backdrop-blur-md"
+>
+  <Image
+    src={caffeine}
+    alt="caffeine molecule"
+    class="aspect-square max-h-[85%] max-w-[90%] object-contain group-hover:motion-safe:animate-float"
+  />
+
+  <p
+    class="absolute top-2 left-2 border-l-2 pl-2 text-sm font-medium text-primary/80 italic"
+  >
+    "Running on <span class="not-italic">☕ </span> and delusion." - Me
+  </p>
+</div>

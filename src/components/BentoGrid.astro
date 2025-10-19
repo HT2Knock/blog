@@ -3,6 +3,7 @@ import PronouceNameTile from "@/components/PronounceNameTile.astro";
 import { KeyboardTile } from "@/components/islands/KeyboardTile";
 import PodcastTile from "@/components/PodcastTile.astro";
 import FlagTile from "@/components/FlagTile.astro";
+import CoffeeTile from "@/components/CoffeeTile.astro";
 ---
 
 <section
@@ -11,13 +12,6 @@ import FlagTile from "@/components/FlagTile.astro";
 >
   <FlagTile />
   <PronouceNameTile />
-
-  <!-- Keyboard Tile -->
-  <div
-    class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
-  >
-    <KeyboardTile client:visible />
-  </div>
 
   <!-- Marathon Tile -->
   <div
@@ -29,18 +23,18 @@ import FlagTile from "@/components/FlagTile.astro";
   </div>
 
   <PodcastTile />
+  <!-- Keyboard Tile -->
+  <div
+    class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
+  >
+    <KeyboardTile client:visible />
+  </div>
 
+  <CoffeeTile />
   <!-- Nvim Tile -->
   <div
     class="flex items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
   >
     <p class="text-base sm:text-lg">💻 btw, I use Nvim + Hyprland</p>
-  </div>
-
-  <!-- Other Thing Tile -->
-  <div
-    class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
-  >
-    <p class="text-sm sm:text-base">I'm a coffee enjoyer</p>
   </div>
 </section>

@@ -15,6 +15,7 @@
 
   --animate-ping-slow: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   --animate-flag-wave: wave 3s linear infinite;
+  --animate-float: float 2s ease-in-out infinite;
 
   @keyframes wave {
     0% {
@@ -22,6 +23,16 @@
     }
     100% {
       background-position: 200% 0;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
     }
   }
 }
