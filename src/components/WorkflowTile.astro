@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import nvim from "@/assets/neovim.svg";
+import ghostty from "@/assets/ghostty.svg";
+import hyprland from "@/assets/hyprland.svg";
+import tmux from "@/assets/tmux.svg";
+import archlinux from "@/assets/archlinux.svg";
+
+const tools = [
+  { name: "Neovim", image: nvim, url: "https://neovim.io" },
+  { name: "Ghostty", image: ghostty, url: "https://ghostty.org" },
+  { name: "Hyprland", image: hyprland, url: "https://hyprland.org" },
+  { name: "Arch Linux", image: archlinux, url: "https://archlinux.org" },
+  { name: "Tmux", image: tmux, url: "https://github.com/tmux/tmux" },
+];
+---
+
+<div
+  id="tool-spotlight"
+  class="group relative flex flex-col items-start overflow-hidden rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md transition-shadow duration-300 hover:shadow-xl lg:col-span-3"
+>
+  <div
+    id="spotlight-bg"
+    class="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500"
+  >
+  </div>
+
+  <h3
+    class="relative z-10 mb-4 flex items-center gap-2 p-4 text-lg font-semibold text-primary"
+  >
+    <Icon name="lucide:terminal" class="inline" /> Tools I live in
+  </h3>
+
+  <div
+    id="tools-grid"
+    class="relative z-10 grid size-full flex-1 grid-cols-2 place-items-center gap-6 grayscale transition-all duration-500 sm:grid-cols-3 md:grid-cols-5"
+  >
+    {
+      tools.map((tool) => (
+        <a
+          href={tool.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group/tool transition-transform duration-300 hover:scale-110"
+          aria-label={tool.name}
+        >
+          <Image
+            class="aspect-square w-[clamp(64px,10vw,120px)] object-contain"
+            src={tool.image}
+            alt={tool.name}
+          />
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  const spotlight = document.getElementById("tool-spotlight");
+  const bg = document.getElementById("spotlight-bg");
+  const grid = document.getElementById("tools-grid");
+
+  if (spotlight && bg && grid) {
+    const isTouch = window.matchMedia("(hover: none)").matches;
+
+    if (isTouch) {
+      // Static glow for touch devices
+      bg.style.opacity = "1";
+      bg.style.background = `radial-gradient(circle at center, var(--color-accent), transparent 70%)`;
+      grid.classList.remove("grayscale");
+    } else {
+      // Interactive spotlight for hover-capable devices
+      spotlight.addEventListener("mouseenter", () => {
+        bg.style.opacity = "1";
+        grid.classList.remove("grayscale");
+      });
+
+      spotlight.addEventListener("mouseleave", () => {
+        bg.style.opacity = "0";
+        grid.classList.add("grayscale");
+      });
+
+      spotlight.addEventListener("mousemove", (e) => {
+        const rect = spotlight.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        bg.style.background = `radial-gradient(circle 200px at ${x}px ${y}px, var(--color-accent), transparent)`;
+      });
+    }
+  }
+</script>

@@ -4,14 +4,16 @@ import { KeyboardTile } from "@/components/islands/KeyboardTile";
 import PodcastTile from "@/components/PodcastTile.astro";
 import FlagTile from "@/components/FlagTile.astro";
 import CaffeineTile from "@/components/CaffeineTile.astro";
+import WorkflowTile from "@/components/WorkflowTile.astro";
 ---
 
 <section
   id="bento-grid"
-  class="grid max-h-[90svh] min-h-[60vh] w-full max-w-[70rem] auto-rows-[minmax(200px,1fr)] grid-cols-1 gap-2 px-4 text-center sm:grid-cols-2 sm:px-6 md:px-8 lg:grid-cols-3 lg:gap-4"
+  class="grid max-w-[70rem] auto-rows-[minmax(200px,1fr)] grid-cols-1 gap-2 px-4 text-center sm:grid-cols-2 sm:px-6 md:px-8 lg:grid-cols-3 lg:gap-4"
 >
   <FlagTile />
   <PronouceNameTile />
+  <PodcastTile />
 
   <!-- Marathon Tile -->
   <div
@@ -22,19 +24,13 @@ import CaffeineTile from "@/components/CaffeineTile.astro";
     </p>
   </div>
 
-  <PodcastTile />
   <!-- Keyboard Tile -->
-  <div
-    class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
-  >
-    <KeyboardTile client:visible />
-  </div>
+  <!-- <div -->
+  <!--   class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md" -->
+  <!-- > -->
+  <!--   <KeyboardTile client:visible /> -->
+  <!-- </div> -->
 
   <CaffeineTile />
-  <!-- Nvim Tile -->
-  <div
-    class="flex items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
-  >
-    <p class="text-base sm:text-lg">💻 btw, I use Nvim + Hyprland</p>
-  </div>
+  <WorkflowTile />
 </section>
