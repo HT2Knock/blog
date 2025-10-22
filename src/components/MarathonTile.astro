@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import marathon2023 from "@/assets/marathon-2023.png";
+import marathon2024 from "@/assets/marathon-2024.png";
+---
+
+<div
+  class="flex flex-col items-center justify-evenly rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
+>
+  <div
+    class="relative h-32 w-40 transition-transform hover:scale-[1.05] hover:-rotate-1 sm:h-40 sm:w-56"
+  >
+    <Image
+      src={marathon2023}
+      alt="half marathon 2023"
+      class="absolute inset-0 h-full w-full translate-x-[-6%] rotate-[-4deg] rounded-xl border border-white object-cover shadow-md"
+    />
+    <Image
+      src={marathon2024}
+      alt="half marathon 2024"
+      class="absolute inset-0 h-full w-full translate-x-[6%] rotate-[3deg] rounded-xl border border-white object-cover shadow-md"
+    />
+  </div>
+  <p class="mt-3 text-center text-pretty">
+    Started running for fun, ended up doing two half marathons. Now I’m in too
+    deep — full 42 km coming 2026 🏃‍♂️
+  </p>
+</div>

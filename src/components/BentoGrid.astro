@@ -5,6 +5,7 @@ import PodcastTile from "@/components/PodcastTile.astro";
 import FlagTile from "@/components/FlagTile.astro";
 import CaffeineTile from "@/components/CaffeineTile.astro";
 import WorkflowTile from "@/components/WorkflowTile.astro";
+import MarathonTile from "@/components/MarathonTile.astro";
 ---
 
 <section
@@ -14,23 +15,7 @@ import WorkflowTile from "@/components/WorkflowTile.astro";
   <FlagTile />
   <PronouceNameTile />
   <PodcastTile />
-
-  <!-- Marathon Tile -->
-  <div
-    class="flex items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md"
-  >
-    <p class="text-base sm:text-lg">
-      🏃‍♂️ 2 Half-Marathons → Training for Full 2026
-    </p>
-  </div>
-
-  <!-- Keyboard Tile -->
-  <!-- <div -->
-  <!--   class="rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md" -->
-  <!-- > -->
-  <!--   <KeyboardTile client:visible /> -->
-  <!-- </div> -->
-
+  <MarathonTile />
   <CaffeineTile />
   <WorkflowTile />
 </section>
