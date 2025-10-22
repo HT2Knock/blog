@@ -14,6 +14,7 @@
     "@faker-js/faker": "^10.0.0",
     "@fontsource-variable/inter": "^5.2.8",
     "@fontsource/silkscreen": "^5.2.8",
+    "@iconify-json/line-md": "^1.2.11",
     "@tailwindcss/vite": "^4.1.13",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.1",

@@ -1,0 +1,22 @@
+---
+import caffeine from "../assets/caffeine.svg";
+import { Image } from "astro:assets";
+import BatteryIcon from "./BatteryIcon.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  class="group relative flex flex-col items-center justify-evenly gap-4 rounded-2xl border border-primary/20 bg-primary/10 p-4 text-center shadow-lg backdrop-blur-md"
+>
+  <p class="text-sm font-medium">
+    <Icon
+      name="line-md:coffee-filled-loop"
+      class="inline-block size-8 text-secondary/70"
+    /> Fueled by caffeine most day.
+  </p>
+  <Image
+    src={caffeine}
+    alt="caffeine molecule"
+    class="aspect-square max-h-[85%] max-w-[90%] object-contain group-hover:motion-safe:animate-float"
+  />
+</div>
