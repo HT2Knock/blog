@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 ---
 
 <div
-  class="row-span-2 flex flex-col justify-evenly rounded-2xl border border-primary/20 bg-primary/10 p-6 shadow-lg backdrop-blur-md sm:col-span-2 sm:row-span-1 lg:p-8"
+  class="flex flex-col justify-evenly rounded-2xl border border-primary/20 bg-primary/10 p-6 shadow-lg backdrop-blur-md lg:col-span-2 lg:p-8"
 >
   <div
     class="grid grid-cols-1 gap-6 sm:grid-cols-[1fr_auto_1fr] sm:items-center"
@@ -15,7 +15,7 @@ import { Icon } from "astro-icon/components";
       type="button"
       aria-label="Play accurate Vietnamese pronunciation"
     >
-      <p class="text-center text-xl font-bold tracking-wide sm:text-2xl">
+      <p class="text-xl font-bold tracking-wide sm:text-2xl">
         /ŋɔk̚ hwɨɲ/
         <Icon
           name="lucide:volume-2"
@@ -49,9 +49,7 @@ import { Icon } from "astro-icon/components";
       type="button"
       aria-label="Play English approximation pronunciation"
     >
-      <p
-        class="text-center text-xl font-bold tracking-wide text-balance sm:text-2xl"
-      >
+      <p class="text-xl font-bold tracking-wide sm:text-2xl">
         "Knock Hwin"
         <Icon
           name="lucide:volume-2"
@@ -68,7 +66,7 @@ import { Icon } from "astro-icon/components";
   </div>
 
   <!-- Help Text -->
-  <p class="text-center text-sm text-text/60 sm:text-base">
+  <p class="text-sm text-text/60 sm:text-base">
     Save my name from being butchered <span class="text-white">😅</span>
   </p>
 </div>
