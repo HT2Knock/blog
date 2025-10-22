@@ -1,11 +1,10 @@
 ---
-import { getDistanceText } from "@/utils/distance";
 import { Icon } from "astro-icon/components";
-
-const { text, country } = await getDistanceText();
+import { DEFAULT_INTRO } from "@/utils/distance";
 ---
 
 <div
+  id="distance-widget"
   class="group relative flex flex-col items-center justify-center gap-3 rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md lg:relative dark:shadow-black/50"
 >
   <div
@@ -15,10 +14,9 @@ const { text, country } = await getDistanceText();
       class="flag-wave-container group-hover:motion-safe:after:animate-flag-wave"
     >
       <svg
-        class="h-20 w-30 rounded lg:h-24 lg:w-36"
+        class="lg:64 aspect-[3/2] rounded sm:w-32 md:w-64"
         viewBox="0 0 30 20"
         xmlns="http://www.w3.org/2000/svg"
-        version="1.1"
       >
         <rect width="30" height="20" fill="#C8102E"></rect>
         <polygon
@@ -28,16 +26,45 @@ const { text, country } = await getDistanceText();
     </div>
   </div>
   <p class="w-4/5 text-sm sm:text-base lg:mt-24">
-    I'm from Ho Chi Minh City, Vietnam which
-    <span class="text-accent italic">{text}</span>
-    {
-      country ? (
-        <span>{`fellow ${country}`} </span>
-      ) : (
-        <span>
-          according to your <Icon name="mdi:ip" class="inline-block" />
-        </span>
-      )
-    }
+    I'm from Ho Chi Minh City, Vietnam -
+    <span id="distance-text" class="text-accent italic">{DEFAULT_INTRO}</span>
   </p>
 </div>
+
+<script>
+  import {
+    getDistanceKm,
+    HCM,
+    NEIGHBOR_THRESHOLD_KM,
+    DEFAULT_INTRO,
+  } from "@/utils/distance";
+
+  async function updateDistance() {
+    const el = document.getElementById("distance-text");
+    if (!el) return;
+
+    try {
+      const response = await fetch("https://ipinfo.io/json");
+      const data = await response.json();
+      const [lat, lon] = data.loc?.split(",").map(Number) || [];
+      if (isNaN(lat) || isNaN(lon)) {
+        el.textContent = DEFAULT_INTRO;
+        return;
+      }
+
+      const km = getDistanceKm(HCM.lat, HCM.lon, lat, lon);
+      const location = [data.city, data.region, data.country]
+        .filter((v, i, arr) => !i || v !== arr[i - 1])
+        .join(", ");
+
+      el.textContent =
+        km < NEIGHBOR_THRESHOLD_KM
+          ? "means we're basically neighbors"
+          : `is roughly ${km.toFixed(1)} km away from ${location}`;
+    } catch {
+      el.textContent = DEFAULT_INTRO;
+    }
+  }
+
+  updateDistance();
+</script>
