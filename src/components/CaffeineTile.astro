@@ -6,13 +6,16 @@ import { Icon } from "astro-icon/components";
 ---
 
 <div
-  class="group relative flex flex-col items-center justify-evenly gap-4 rounded-2xl border border-primary/20 bg-primary/10 p-4 text-center shadow-lg backdrop-blur-md"
+  class="group relative flex flex-col items-center justify-center gap-4 rounded-2xl border border-primary/20 bg-primary/10 p-4 text-center shadow-lg backdrop-blur-md"
 >
   <p class="text-sm font-medium">
     <Icon
       name="line-md:coffee-filled-loop"
       class="inline-block size-8 text-secondary/70"
-    /> Fueled by caffeine most day.
+    /> Fueled by <span
+      class="underline decoration-secondary decoration-2 underline-offset-4"
+      >caffeine</span
+    > most day.
   </p>
   <Image
     src={caffeine}
