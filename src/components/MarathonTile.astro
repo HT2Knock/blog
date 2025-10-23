@@ -2,13 +2,14 @@
 import { Image } from "astro:assets";
 import marathon2023 from "@/assets/marathon-2023.png";
 import marathon2024 from "@/assets/marathon-2024.png";
+import { Icon } from "astro-icon/components";
 ---
 
 <div
   class="group flex flex-col items-center justify-evenly rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md dark:shadow-black/50"
 >
   <div
-    class="relative h-32 w-40 transition-transform group-hover:scale-[1.05] group-hover:-rotate-2 sm:h-40 sm:w-56"
+    class="relative h-48 w-64 transition-transform group-hover:scale-[1.05] group-hover:-rotate-2"
   >
     <Image
       src={marathon2023}
@@ -21,10 +22,24 @@ import marathon2024 from "@/assets/marathon-2024.png";
       class="absolute inset-0 h-full w-full translate-x-[6%] rotate-[3deg] rounded-xl border border-white object-cover shadow-md"
     />
   </div>
-  <p class="mt-3">
-    Started running for fun, ended up doing <span
-      class="underline decoration-secondary decoration-2 underline-offset-4"
-      >two half marathons</span
-    >. Full <span class="font-semibold text-accent">42.2 km</span> coming soon.
-  </p>
+  <div>
+    <p class="p-6">
+      Started running for fun, ended up doing <span
+        class="underline decoration-secondary decoration-2 underline-offset-4"
+        >two half marathons</span
+      >.
+    </p>
+
+    <div class="flex items-center justify-center gap-1">
+      <Icon
+        name="lucide:arrow-right"
+        class="hidden h-6 w-6 text-text/60 sm:block"
+        aria-hidden="true"
+      />
+
+      <p>
+        Full <span class="font-semibold text-accent"> 42.2 km</span> coming soon.
+      </p>
+    </div>
+  </div>
 </div>
