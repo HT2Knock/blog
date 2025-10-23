@@ -3,7 +3,7 @@ import Avatar from "@/components/Avatar.astro";
 ---
 
 <section
-  class="flex h-[clamp(60vh,90vh,1100px)] flex-col items-center justify-center px-8"
+  class="mt-4 flex h-[clamp(600px,100svh,1000px)] flex-col items-center justify-center gap-4 p-8 md:gap-8"
 >
   <div
     class="mb-4 flex w-fit items-center gap-2 rounded-full border border-secondary/50 px-3 py-1 text-sm font-medium text-text"
@@ -19,13 +19,9 @@ import Avatar from "@/components/Avatar.astro";
 
   <Avatar />
 
-  <h1 class="font-pixel text-[clamp(3rem,3rem+3vw,6rem)] text-primary">
-    Ngoc Huynh.
-  </h1>
+  <h1 class="font-pixel text-4xl text-primary sm:text-7xl">Ngoc Huynh.</h1>
 
-  <div
-    class="mt-4 grid gap-4 text-[clamp(0.5rem,0.9rem+0.5vw,1.25rem)] text-text/85"
-  >
+  <div class="mt-4 grid gap-4 text-text/85">
     <p>I’m a software engineer who loves building things that actually work.</p>
     <p>
       I tinker with code, Linux, and systems — and share what I learn along the
