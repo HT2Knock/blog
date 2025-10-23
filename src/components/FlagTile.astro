@@ -59,7 +59,7 @@ import { DEFAULT_INTRO } from "@/utils/distance";
 
       el.textContent =
         km < NEIGHBOR_THRESHOLD_KM
-          ? "means we're basically neighbors"
+          ? "that means we're basically neighbors less than an hour fly 🛫 "
           : `is roughly ${km.toFixed(1)} km away from ${location}`;
     } catch {
       el.textContent = DEFAULT_INTRO;
