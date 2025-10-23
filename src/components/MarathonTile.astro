@@ -5,10 +5,10 @@ import marathon2024 from "@/assets/marathon-2024.png";
 ---
 
 <div
-  class="flex flex-col items-center justify-evenly rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md dark:shadow-black/50"
+  class="group flex flex-col items-center justify-evenly rounded-2xl border border-primary/20 bg-primary/10 p-4 shadow-lg backdrop-blur-md dark:shadow-black/50"
 >
   <div
-    class="relative h-32 w-40 transition-transform hover:scale-[1.05] hover:-rotate-1 sm:h-40 sm:w-56"
+    class="relative h-32 w-40 transition-transform group-hover:scale-[1.05] group-hover:-rotate-2 sm:h-40 sm:w-56"
   >
     <Image
       src={marathon2023}
@@ -22,7 +22,9 @@ import marathon2024 from "@/assets/marathon-2024.png";
     />
   </div>
   <p class="mt-3">
-    Started running for fun, ended up doing two half marathons. Full 42.2 km
-    coming soon.
+    Started running for fun, ended up doing <span
+      class="underline decoration-secondary decoration-2 underline-offset-4"
+      >two half marathons</span
+    >. Full <span class="font-semibold text-accent">42.2 km</span> coming soon.
   </p>
 </div>
