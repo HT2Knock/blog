@@ -3,46 +3,37 @@ import Avatar from "@/components/Avatar.astro";
 ---
 
 <section
-  class="flex h-[clamp(60vh,90vh,1100px)] max-h-[90svh] min-h-[60vh] max-w-7xl flex-col-reverse items-center justify-evenly px-8 text-left lg:flex-row"
+  class="flex h-[clamp(60vh,90vh,1100px)] flex-col items-center justify-center px-8"
 >
-  <div>
-    <h1
-      class="text-center font-pixel text-[clamp(3rem,3rem+3vw,6rem)] text-balance text-primary"
-    >
-      Ngoc Huynh.
-    </h1>
-
-    <div
-      class="mt-4 grid gap-4 text-[clamp(0.5rem,0.9rem+0.5vw,1.25rem)] text-pretty text-text/70"
-    >
-      <p>
-        I’m a software engineer who loves building things that actually work.
-      </p>
-      <p>
-        I tinker with code, Linux, and systems — and share what I learn along
-        the way.
-      </p>
-      <p>
-        I believe tech should be playful and fulfilling — not just a means to an
-        end.
-      </p>
+  <div
+    class="mb-4 flex w-fit items-center gap-2 rounded-full border border-secondary/50 px-3 py-1 text-sm font-medium text-text"
+  >
+    <div class="relative flex size-1.5">
+      <span
+        class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent/50"
+      ></span>
+      <span class="relative inline-flex size-1.5 rounded-full bg-accent"></span>
     </div>
+    <span>Available for projects</span>
   </div>
 
-  <div>
-    <div
-      class="mb-4 flex w-fit items-center gap-2 rounded-full border border-secondary/50 px-3 py-1 text-sm font-medium text-text"
-    >
-      <div class="relative flex size-1.5">
-        <span
-          class="absolute inline-flex h-full w-full animate-ping-slow rounded-full bg-accent/50"
-        ></span>
-        <span class="relative inline-flex size-1.5 rounded-full bg-accent"
-        ></span>
-      </div>
-      <span>Available for projects</span>
-    </div>
+  <Avatar />
 
-    <Avatar />
+  <h1 class="font-pixel text-[clamp(3rem,3rem+3vw,6rem)] text-primary">
+    Ngoc Huynh.
+  </h1>
+
+  <div
+    class="mt-4 grid gap-4 text-[clamp(0.5rem,0.9rem+0.5vw,1.25rem)] text-text/85"
+  >
+    <p>I’m a software engineer who loves building things that actually work.</p>
+    <p>
+      I tinker with code, Linux, and systems — and share what I learn along the
+      way.
+    </p>
+    <p>
+      I believe tech should be playful and fulfilling — not just a means to an
+      end.
+    </p>
   </div>
 </section>

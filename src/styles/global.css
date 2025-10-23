@@ -11,9 +11,8 @@
   --color-background: oklch(89% 0.015 282);
   --color-primary: oklch(40% 0.15 263);
   --color-secondary: oklch(65% 0.12 272);
-  --color-accent: oklch(72% 0.07 149);
+  --color-accent: oklch(40% 0.08 149);
 
-  --animate-ping-slow: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   --animate-flag-wave: wave 3s linear infinite;
   --animate-float: float 2s ease-in-out infinite;
 
@@ -47,6 +46,30 @@
       --color-secondary: oklch(40% 0.13 272);
       --color-accent: oklch(65% 0.08 149);
     }
+  }
+}
+
+@layer base {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
   }
 }
 
